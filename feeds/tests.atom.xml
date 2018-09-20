@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kristen McIntyre's Development Blog - tests</title><link href="https://Kautumn06.github.io/" rel="alternate"></link><link href="https://Kautumn06.github.io/feeds/tests.atom.xml" rel="self"></link><id>https://Kautumn06.github.io/</id><updated>2018-09-13T12:30:00-04:00</updated><entry><title>Test reStructuredText Post</title><link href="https://Kautumn06.github.io/test-article-rst-post.html" rel="alternate"></link><published>2018-09-13T12:30:00-04:00</published><updated>2018-09-13T12:30:00-04:00</updated><author><name>Kristen McIntyre</name></author><id>tag:kautumn06.github.io,2018-09-13:/test-article-rst-post.html</id><summary type="html">&lt;p class="first last"&gt;This is a test post using reStructuredText.&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;Test reStructuredText Post&lt;/p&gt;
+&lt;img alt="Buffy studying" src="https://Kautumn06.github.io/images/buffy.jpg" /&gt;
+&lt;p&gt;I thought it was gonna be like in the movies — you know, inspirational music, a montage: me sharpening my pencil, me reading, writing, falling asleep on a big pile of books with my glasses all crooked, 'cause in my montage, I have glasses. But real life is slow, and it's starting to hurt my occipital lobe. — Buffy&lt;/p&gt;
+</content><category term="testtag"></category></entry></feed>
