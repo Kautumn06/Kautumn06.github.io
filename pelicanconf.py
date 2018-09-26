@@ -6,7 +6,7 @@ AUTHOR = 'Kristen McIntyre'
 SITENAME = "Kristen McIntyre's Development Blog"
 SITETITLE = "Kristen McIntyre"
 SITESUBTITLE = 'sic parvis magna'
-SITEURL = ''
+SITEURL = 'http://Kautumn06.github.io'
 
 PATH = 'content'
 
@@ -21,7 +21,7 @@ DATE_FORMATS = {
 }
 
 # Theme Settings
-THEME = '/home/kautumn06/pelican-themes/Flex'
+THEME = 'theme/Flex'
 FAVICON = '/images/favicon.png'
 SITELOGO = '/images/lola.jpg'
 #PYGMENTS_STYLE = 'monokai'
@@ -35,6 +35,9 @@ MENUITEMS = (
 )
 
 DEFAULT_PAGINATION = 10
+
+# Default category to misc
+DEFAULT_CATEGORY = 'misc'
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
@@ -54,6 +57,7 @@ SOCIAL = (
     ('github', 'https://github.com/Kautumn06'),)
 
 GITHUB_URL = 'https://github.com/Kautumn06'
+LINKEDIN_USERNAME = 'kristenmcintyre1'
 
 # Adds Twitter sharing button to articles
 TWITTER_USERNAME = 'Kautumn06'
@@ -66,9 +70,20 @@ EXTRA_PATH_METADATA = {
     'extras/robots.txt': {'path': 'robots.txt'},
 }
 
+# Set all articles to draft by default
+DEFAULT_METADATA = {
+    'status': 'draft',
+}
+
+# Exclude Jupyter Notebook checkpoints
+PAGE_EXCLUDES = ['.ipynb_checkpoints']
+ARTICLE_EXCLUDES = ['.ipynb_checkpoints']
+
 # Plugin Settings
 PLUGIN_PATHS = ['/home/kautumn06/pelican_plugins']
+#MARKUP = ('md', 'ipynb')
 #PLUGINS = [
+#    'ipynb.markup',
 #    'i18n_subsites',
 #    'render_math',
 #    'sitemap',
