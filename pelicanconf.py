@@ -76,11 +76,11 @@ DEFAULT_METADATA = {
 }
 
 # Exclude Jupyter Notebook checkpoints
-PAGE_EXCLUDES = ['.ipynb_checkpoints']
-ARTICLE_EXCLUDES = ['.ipynb_checkpoints']
+#PAGE_EXCLUDES = ['.ipynb_checkpoints']
+#ARTICLE_EXCLUDES = ['.ipynb_checkpoints']
 
 # Plugin Settings
-PLUGIN_PATHS = ['/home/kautumn06/pelican_plugins']
+#PLUGIN_PATHS = ['/home/kautumn06/pelican_plugins']
 #MARKUP = ('md', 'ipynb')
 #PLUGINS = [
 #    'ipynb.markup',
@@ -106,6 +106,6 @@ PLUGIN_PATHS = ['/home/kautumn06/pelican_plugins']
 #}
 
 # Uncomment following line if you want document-relative URLs when developing
-#RELATIVE_URLS = False
+RELATIVE_URLS = True
 
 #COPYRIGHT_YEAR = 2018
