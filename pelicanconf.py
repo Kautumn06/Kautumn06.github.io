@@ -24,7 +24,7 @@ DATE_FORMATS = {
 THEME = 'theme/Flex'
 FAVICON = '/images/favicon.png'
 SITELOGO = '/images/lola.jpg'
-#PYGMENTS_STYLE = 'monokai'
+PYGMENTS_STYLE = 'friendly'
 
 # Main Menu
 MAIN_MENU = True
@@ -68,6 +68,7 @@ STATIC_PATHS = ['extras', 'images']
 # Path-specific metadata
 EXTRA_PATH_METADATA = {
     'extras/robots.txt': {'path': 'robots.txt'},
+    'images/favicon.ico': {'path': 'favicon.ico'},
 }
 
 # Set all articles to draft by default
@@ -76,19 +77,19 @@ DEFAULT_METADATA = {
 }
 
 # Exclude Jupyter Notebook checkpoints
-#PAGE_EXCLUDES = ['.ipynb_checkpoints']
-#ARTICLE_EXCLUDES = ['.ipynb_checkpoints']
+IGNORE_FILES = ['.ipynb_checkpoints']
 
 # Plugin Settings
 #PLUGIN_PATHS = ['/home/kautumn06/pelican_plugins']
-#MARKUP = ('md', 'ipynb')
-#PLUGINS = [
-#    'ipynb.markup',
+PLUGIN_PATHS = ['/home/kautumn06/pelican_plugins', 'pelican-plugins']
+MARKUP = ('md', 'ipynb')
+PLUGINS = [
+    'ipynb2pelican',
 #    'i18n_subsites',
-#    'render_math',
+    'render_math',
 #    'sitemap',
 #    'tipue_search',
-#]
+]
 
 # Sitemap settings
 #SITEMAP = {
