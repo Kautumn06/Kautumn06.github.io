@@ -63,7 +63,7 @@ LINKEDIN_USERNAME = 'kristenmcintyre1'
 TWITTER_USERNAME = 'Kautumn06'
 
 # Static paths are copied without parsing their contents
-STATIC_PATHS = ['extras', 'images']
+STATIC_PATHS = ['extras', 'images', 'pdfs']
 
 # Path-specific metadata
 EXTRA_PATH_METADATA = {
@@ -88,7 +88,7 @@ PLUGINS = [
 #    'i18n_subsites',
     'render_math',
 #    'sitemap',
-#    'tipue_search',
+    'tipue_search',
 ]
 
 # Sitemap settings
