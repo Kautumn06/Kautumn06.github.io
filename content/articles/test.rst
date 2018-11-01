@@ -6,7 +6,7 @@ Test reStructuredText Post
 :category: tests
 :slug: test-article-rst-post
 :summary: This is a test post using reStructuredText.
-:status: published
+:status: draft
 
 Test reStructuredText Post
 

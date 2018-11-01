@@ -3,7 +3,7 @@ Date: 2018-09-13 12:30
 Slug: test-md
 Tags: testtag
 Summary: This is a test post using markdown.
-Status: published
+Status: draft
 
 Test Markdown Page
 
