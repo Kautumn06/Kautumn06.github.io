@@ -14,7 +14,6 @@ of my progress—or lack thereof. And if helps someone else who is
 struggling—since I certainly know what that is like―then that would be nice
 too.
 
-One of my next steps for this website is to add a short description of my
-background and perhaps my resume. However, until then, here is a somewhat random overview:
+If you're interested in my resume, you can find a pdf copy of it [here]({filename}/pdfs/resume.pdf). Or if you prefer a somewhat more random overview:
 
 > Aspiring data scientist. Lover of cats, Python and pandas (both the animals and the python library), 19th and 20th century Russian literature, Buffy the Vampire Slayer, Cleveland Browns football, Winston Churchill biographies, and cleaning data (I find it soothing. And yes, I know that's strange). 
