@@ -110,7 +110,7 @@
 <li>model selection visualizers &mdash; compare multiple models against each other</li>
 </ul>
 <p>While this may sound confusing at first, the visualizers are grouped according to the type of analysis that they are best suited for, which brings us (finally!) to the actual topic of this post&mdash;clustering visualizers! The clustering visualizers work by <em>wrapping</em> scikit-learn estimators via their <code>fit()</code> method, and once the model is trained, calling <code>poof()</code> to display the plot.</p>
-<p>Unsupervised models can be particularly difficult to evaluate since we lack any labeled data. Not to be indelicate, but lacking ground truth for our dataset, what always comes to mind is a quote by former Supreme Court Justice Potter Stewart, "I know it when I see it." However, for this walk-though we will actually have the advantage of knowing the ideal number of clusters, since I'll use scikit-learn's <code>make_blobs()</code> function to create a sample two-dimensional dataset with 8 random groups of points. This may seem like cheating at first; however, I found this helpful when I first learning, so I had at least some basis of comparison.</p>
+<p>Unsupervised models can be particularly difficult to evaluate since we lack any labeled data. Not to be indelicate, but lacking ground truth for our dataset, what always comes to mind is a quote by former Supreme Court Justice Potter Stewart, "I know it when I see it." However, for this walk-though we will actually have the advantage of knowing the ideal number of clusters, since I'll use scikit-learn's <code>make_blobs()</code> function to create a sample two-dimensional dataset with 8 random groups of points. This may seem like cheating at first; however, I found this helpful when I was first learning, since it gave me a basis of comparison from which to start from.</p>
 
 </div>
 </div>
@@ -134,8 +134,7 @@
 <div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Import required modules</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">matplotlib</span> <span class="k">as</span> <span class="nn">mpl</span> 
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span> 
 
@@ -185,8 +184,8 @@
 <span class="n">model</span> <span class="o">=</span> <span class="n">KMeans</span><span class="p">()</span>
 <span class="n">visualizer</span> <span class="o">=</span> <span class="n">KElbowVisualizer</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">12</span><span class="p">))</span>
 
-<span class="n">visualizer</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>    <span class="c1"># Fit the data to the visualizer</span>
-<span class="n">visualizer</span><span class="o">.</span><span class="n">poof</span><span class="p">()</span>    <span class="c1"># Draw/show/poof the data</span>
+<span class="n">visualizer</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>        <span class="c1"># Fit the data to the visualizer</span>
+<span class="n">visualizer</span><span class="o">.</span><span class="n">poof</span><span class="p">()</span>        <span class="c1"># Draw/show/poof the data</span>
 </pre></div>
 
     </div>
@@ -234,8 +233,8 @@
 <span class="n">model</span> <span class="o">=</span> <span class="n">KMeans</span><span class="p">()</span>
 <span class="n">visualizer</span> <span class="o">=</span> <span class="n">KElbowVisualizer</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">12</span><span class="p">),</span> <span class="n">metric</span><span class="o">=</span><span class="s1">&#39;calinski_harabaz&#39;</span><span class="p">,</span> <span class="n">timings</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 
-<span class="n">visualizer</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>    <span class="c1"># Fit the data to the visualizer</span>
-<span class="n">visualizer</span><span class="o">.</span><span class="n">poof</span><span class="p">()</span>    <span class="c1"># Draw/show/poof the data</span>
+<span class="n">visualizer</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>        <span class="c1"># Fit the data to the visualizer</span>
+<span class="n">visualizer</span><span class="o">.</span><span class="n">poof</span><span class="p">()</span>        <span class="c1"># Draw/show/poof the data</span>
 </pre></div>
 
     </div>
@@ -294,8 +293,8 @@
 <span class="n">model</span> <span class="o">=</span> <span class="n">KMeans</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
 <span class="n">visualizer</span> <span class="o">=</span> <span class="n">SilhouetteVisualizer</span><span class="p">(</span><span class="n">model</span><span class="p">)</span>
 
-<span class="n">visualizer</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>    <span class="c1"># Fit the data to the visualizer</span>
-<span class="n">visualizer</span><span class="o">.</span><span class="n">poof</span><span class="p">()</span>    <span class="c1"># Draw/show/poof the data</span>
+<span class="n">visualizer</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>        <span class="c1"># Fit the data to the visualizer</span>
+<span class="n">visualizer</span><span class="o">.</span><span class="n">poof</span><span class="p">()</span>        <span class="c1"># Draw/show/poof the data</span>
 </pre></div>
 
     </div>
@@ -343,8 +342,8 @@
 <span class="n">model</span> <span class="o">=</span> <span class="n">KMeans</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
 <span class="n">visualizer</span> <span class="o">=</span> <span class="n">SilhouetteVisualizer</span><span class="p">(</span><span class="n">model</span><span class="p">)</span>
 
-<span class="n">visualizer</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>    <span class="c1"># Fit the data to the visualizer</span>
-<span class="n">visualizer</span><span class="o">.</span><span class="n">poof</span><span class="p">()</span>    <span class="c1"># Draw/show/poof the data</span>
+<span class="n">visualizer</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>        <span class="c1"># Fit the data to the visualizer</span>
+<span class="n">visualizer</span><span class="o">.</span><span class="n">poof</span><span class="p">()</span>        <span class="c1"># Draw/show/poof the data</span>
 </pre></div>
 
     </div>
@@ -377,7 +376,7 @@
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>That's it for now, but if you're interested in learning more about Yellowbrick, I've also posted a walkthrough of Yellowbrick's <a href="https://Kautumn06.github.io/yellowbricks-regression-visualizers.html">regression visualizers</a> and will hopefully finish similar posts for the classification, text, feature and model selection visualizers over the next couple of months.</p>
+<p>That's it for now, but if you're interested in learning more about Yellowbrick, I've also posted a walk-through of Yellowbrick's <a href="https://Kautumn06.github.io/yellowbricks-regression-visualizers.html">regression visualizers</a> and will hopefully finish similar posts for the classification, text, feature and model selection visualizers over the next couple of months.</p>
 
 </div>
 </div>
